@@ -48,7 +48,8 @@
   only the schema registry URL is required."
 
   [& options]
-  (let [{:keys [type-registry schema-registry-url schema-registry-client]}
+  (let [{:keys [type-registry schema-registry-url
+                schema-registry-client schema-registry-config]}
         (apply hash-map options)]
 
     (fn [{:keys [serde-keyword schema schema-filename key? read-only?] :as serde-config}]
@@ -67,5 +68,6 @@
                             (s/explain-data :jackdaw.serde/confluent-avro-serde serde-config)))
             (serde-fn schema-registry-url schema key? {:type-registry type-registry
                                                        :schema-registry-client schema-registry-client
+                                                       :schema-registry-config schema-registry-config
                                                        :read-only? read-only?}))
           (serde-fn))))))
