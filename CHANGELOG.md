@@ -4,6 +4,10 @@
 
 ### Added
 
+* Upgraded
+  * Kafka client version to 2.5.0 https://downloads.apache.org/kafka/2.5.0/RELEASE_NOTES.html https://kafka.apache.org/25/documentation.html#upgrade_250_notable
+  * Confluent Platform components version to 5.5.1 https://docs.confluent.io/5.5.1/release-notes/index.html#cp-5-5-0-release-notes
+
 ### Fixed
 
 ## [0.7.5] - [2020-07-02] 
